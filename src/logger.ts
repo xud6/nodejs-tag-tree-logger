@@ -2,12 +2,6 @@ import { logDriverBase } from "./logDriverBase";
 import { tLogTag, tLogLevel } from "./types";
 import { forEach, union } from "lodash";
 
-async function asyncForEach<T>(array: T[], callback: (obj: T, index: number, array: T[]) => Promise<void>) {
-    for (let index = 0; index < array.length; index++) {
-        await callback(array[index], index, array)
-    }
-}
-
 /**
  * standard logger implitation
  * 
@@ -82,11 +76,15 @@ export class logger {
         setTimeout(() => {
             process.exit(-1);
         }, this.faultTimout)
-        asyncForEach(this.drivers, async (driver) => {
-            await driver.completeTransfer()
-        }).then(() => {
-            process.exit(-1);
-        })
+        return this.completeTransferAndExit();
+    }
+    private async completeTransferAndExit() {
+        try {
+            for (let driver of this.drivers) {
+                await driver.completeTransfer()
+            }
+        } catch (e) { }
+        process.exit(-1);
     }
     /**
      * Create a sub logger instance include all tags of parent and use same log driver
@@ -97,14 +95,14 @@ export class logger {
     }
 
     async logEnable(tags: string[]) {
-        asyncForEach(this.drivers, async (driver) => {
+        for (let driver of this.drivers) {
             await driver.logEnable(tags);
-        })
+        }
     }
     async logDisable(tags: string[]) {
-        asyncForEach(this.drivers, async (driver) => {
+        for (let driver of this.drivers) {
             await driver.logDisable(tags);
-        })
+        }
     }
 }
 
