@@ -1,0 +1,45 @@
+{
+  "name": "tagged-logger",
+  "version": "1.0.0",
+  "description": "tagged-logger",
+  "main": "dist/index.js",
+  "typings": "dist/definitions/index.d.ts",
+  "scripts": {
+    "test": "gulp test",
+    "build": "gulp build",
+    "prepublishOnly": "gulp prePublish",
+    "version": "typedoc --out docs src && git add -A docs",
+    "debug": "ts-node debug/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xud6/nodejs-tagged-logger.git"
+  },
+  "keywords": [],
+  "author": "xud6",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/lodash": "^4.14.122",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^11.10.5",
+    "chai": "^4.2.0",
+    "del": "^4.0.0",
+    "gulp": "^4.0.0",
+    "gulp-mocha": "^6.0.0",
+    "gulp-typescript": "^5.0.0",
+    "jsdoc-to-markdown": "^4.0.0",
+    "merge2": "^1.2.3",
+    "mocha": "^6.0.0",
+    "ts-node": "^8.0.1",
+    "typedoc": "^0.14.2",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "lodash": "^4.17.11"
+  },
+  "files": [
+    "dist"
+  ]
+}
