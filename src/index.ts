@@ -1,6 +1,5 @@
 export * from './types'
-export * from './cLoggerBase'
-export * from './cLogger'
+export * from './logger'
 export * from './cBlankLogger'
 export * from './cLogDriverConsole'
 

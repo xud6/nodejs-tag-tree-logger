@@ -1,4 +1,3 @@
-import { logger } from "./cLoggerBase";
 import { cLogDriverBase } from "./cLogDriverBase";
 import { tLogTag, tLogLevel } from "./types";
 import { forEach, union } from "lodash";
@@ -8,13 +7,14 @@ async function asyncForEach<T>(array: T[], callback: (obj: T, index: number, arr
         await callback(array[index], index, array)
     }
 }
+
 /**
  * standard logger implitation
  * 
  * @export
  * @implements {loggerAPI}
  */
-export class cLogger extends logger {
+export class logger {
     /**
      * Creates an instance of logger.
      * @param {string[]} tags tags
@@ -22,7 +22,6 @@ export class cLogger extends logger {
      */
 
     constructor(readonly drivers: cLogDriverBase[], readonly tags: tLogTag[], enabledTags: string[] = [], readonly faultTimout: number = 1000) {
-        super()
         forEach(drivers, (driver) => {
             driver.logEnable(enabledTags);
         })
@@ -94,7 +93,7 @@ export class cLogger extends logger {
      * @param {string[]} tags
      */
     readonly logger = (tags: tLogTag[], enabledTags: tLogTag[] = []) => {
-        return new cLogger(this.drivers, union(this.tags, tags), enabledTags);
+        return new logger(this.drivers, union(this.tags, tags), enabledTags);
     }
 
     async logEnable(tags: string[]) {
@@ -108,3 +107,5 @@ export class cLogger extends logger {
         })
     }
 }
+
+export let cLogger = logger
