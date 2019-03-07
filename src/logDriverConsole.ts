@@ -1,4 +1,4 @@
-import { cLogDriverBase } from "./cLogDriverBase";
+import { cLogDriverBase } from "./logDriverBase";
 import chalk, { Chalk } from "chalk";
 import { tLogLevel } from "./types";
 import { difference, union, intersection, reduce, find } from "lodash";

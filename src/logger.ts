@@ -1,4 +1,4 @@
-import { cLogDriverBase } from "./cLogDriverBase";
+import { cLogDriverBase } from "./logDriverBase";
 import { tLogTag, tLogLevel } from "./types";
 import { forEach, union } from "lodash";
 

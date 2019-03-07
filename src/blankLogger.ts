@@ -1,4 +1,4 @@
-import { cLogDriverBlank } from "./cLogDriverBlank";
+import { cLogDriverBlank } from "./logDriverBlank";
 import { logger } from "./logger";
 
 let blankLogDrive = new cLogDriverBlank()

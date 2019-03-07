@@ -1,4 +1,4 @@
-import { cLogDriverBase } from "./cLogDriverBase";
+import { cLogDriverBase } from "./logDriverBase";
 
 export class cLogDriverBlank extends cLogDriverBase {
     constructor(readonly colorEnable: boolean = true) {
