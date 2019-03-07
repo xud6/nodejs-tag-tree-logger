@@ -1,10 +1,10 @@
-import { cLogDriverBase } from "./logDriverBase";
+import { logDriverBase } from "./logDriverBase";
 import chalk, { Chalk } from "chalk";
 import { tLogLevel } from "./types";
 import { difference, union, intersection, reduce, find } from "lodash";
 import { format } from "util";
 
-export class cLogDriverConsole extends cLogDriverBase {
+export class cLogDriverConsole extends logDriverBase {
     chalk: Chalk
     private readonly avaliableTagColors: Chalk[]
     private avaliableTagColorCnt = 0

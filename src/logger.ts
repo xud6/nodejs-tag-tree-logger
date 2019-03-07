@@ -1,4 +1,4 @@
-import { cLogDriverBase } from "./logDriverBase";
+import { logDriverBase } from "./logDriverBase";
 import { tLogTag, tLogLevel } from "./types";
 import { forEach, union } from "lodash";
 
@@ -21,7 +21,7 @@ export class logger {
      * @param {tLogLevel} [level=logLevelTable.warn] max log level to output
      */
 
-    constructor(readonly drivers: cLogDriverBase[], readonly tags: tLogTag[], enabledTags: string[] = [], readonly faultTimout: number = 1000) {
+    constructor(readonly drivers: logDriverBase[], readonly tags: tLogTag[], enabledTags: string[] = [], readonly faultTimout: number = 1000) {
         forEach(drivers, (driver) => {
             driver.logEnable(enabledTags);
         })
