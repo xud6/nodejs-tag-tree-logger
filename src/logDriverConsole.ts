@@ -4,7 +4,7 @@ import { tLogLevel } from "./types";
 import { difference, union, intersection, reduce, find } from "lodash";
 import { format } from "util";
 
-export class cLogDriverConsole extends logDriverBase {
+export class logDriverConsole extends logDriverBase {
     chalk: Chalk
     private readonly avaliableTagColors: Chalk[]
     private avaliableTagColorCnt = 0
@@ -79,3 +79,5 @@ export class cLogDriverConsole extends logDriverBase {
         }
     }
 }
+
+export let cLogDriverConsole = logDriverConsole
