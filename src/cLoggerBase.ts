@@ -1,7 +1,7 @@
 import { tLogLevel, tLogTag } from "./types";
 
 /**
- * logger API 定义
+ * logger API definition
  * 
  * @export
  * @interface loggerAPI

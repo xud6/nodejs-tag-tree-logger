@@ -9,7 +9,7 @@ async function asyncForEach<T>(array: T[], callback: (obj: T, index: number, arr
     }
 }
 /**
- * logger
+ * standard logger implitation
  * 
  * @export
  * @implements {loggerAPI}
@@ -17,8 +17,8 @@ async function asyncForEach<T>(array: T[], callback: (obj: T, index: number, arr
 export class cLogger extends logger {
     /**
      * Creates an instance of logger.
-     * @param {string[]} tags 标签
-     * @param {tLogLevel} [level=logLevelTable.warn] 最大输出log level
+     * @param {string[]} tags tags
+     * @param {tLogLevel} [level=logLevelTable.warn] max log level to output
      */
 
     constructor(readonly drivers: cLogDriverBase[], readonly tags: tLogTag[], enabledTags: string[] = [], readonly faultTimout: number = 1000) {
@@ -90,7 +90,7 @@ export class cLogger extends logger {
         })
     }
     /**
-     * 生成一个子logger，包含父logger的所有标签
+     * Create a sub logger instance include all tags of parent and use same log driver
      * @param {string[]} tags
      */
     readonly logger = (tags: tLogTag[], enabledTags: tLogTag[] = []) => {
