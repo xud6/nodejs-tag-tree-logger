@@ -11,10 +11,11 @@ import { forEach, union } from "lodash";
 export class logger {
     /**
      * Creates an instance of logger.
-     * @param {string[]} tags tags
-     * @param {tLogLevel} [level=logLevelTable.warn] max log level to output
+     * @param drivers 
+     * @param tags 
+     * @param enabledTags 
+     * @param faultTimout 
      */
-
     constructor(readonly drivers: logDriverBase[], readonly tags: tLogTag[], enabledTags: string[] = [], readonly faultTimout: number = 10000) {
         forEach(drivers, (driver) => {
             driver.logEnable(enabledTags);
@@ -89,6 +90,7 @@ export class logger {
     /**
      * Create a sub logger instance include all tags of parent and use same log driver
      * @param {string[]} tags
+     * @param {string[]} enabledTags
      */
     readonly logger = (tags: tLogTag[], enabledTags: tLogTag[] = []) => {
         return new logger(this.drivers, union(this.tags, tags), enabledTags);
