@@ -1,7 +1,7 @@
 {
-  "name": "tagged-logger",
+  "name": "tag-tree-logger",
   "version": "1.0.2",
-  "description": "tagged-logger",
+  "description": "a logger with tag tree support",
   "main": "dist/index.js",
   "typings": "dist/definitions/index.d.ts",
   "scripts": {
