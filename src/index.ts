@@ -6,4 +6,3 @@ export * from './cLogger'
 export * from './cBlankLogger'
 export * from './cLogDriverConsole'
 
-export const blankLogger = new cBlankLogger

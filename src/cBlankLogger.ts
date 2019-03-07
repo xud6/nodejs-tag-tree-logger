@@ -23,3 +23,5 @@ export class cBlankLogger extends logger {
     logEnable(tags: string[]) { }
     logDisable(tags: string[]) { }
 }
+
+export const blankLogger = new cBlankLogger
