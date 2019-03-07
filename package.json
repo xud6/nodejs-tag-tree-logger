@@ -1,6 +1,6 @@
 {
   "name": "tagged-logger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "tagged-logger",
   "main": "dist/index.js",
   "typings": "dist/definitions/index.d.ts",
