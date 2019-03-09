@@ -87,7 +87,12 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">logger</span>
+						<a href="_tlogger_.tlogger.html" class="tsd-signature-type">tLogger</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">logger</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -106,24 +111,25 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_logger_.logger.html#drivers" class="tsd-kind-icon">drivers</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_logger_.logger.html#faulttimout" class="tsd-kind-icon">fault<wbr>Timout</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_logger_.logger.html#tags" class="tsd-kind-icon">tags</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_logger_.logger.html#level" class="tsd-kind-icon">level</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="_logger_.logger.html#tags" class="tsd-kind-icon">tags</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_logger_.logger.html#completetransferandexit" class="tsd-kind-icon">complete<wbr>Transfer<wbr>And<wbr>Exit</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_logger_.logger.html#debug" class="tsd-kind-icon">debug</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_logger_.logger.html#error" class="tsd-kind-icon">error</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_logger_.logger.html#fault" class="tsd-kind-icon">fault</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_logger_.logger.html#info" class="tsd-kind-icon">info</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_logger_.logger.html#log" class="tsd-kind-icon">log</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_logger_.logger.html#debug" class="tsd-kind-icon">debug</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_logger_.logger.html#error" class="tsd-kind-icon">error</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_logger_.logger.html#fault" class="tsd-kind-icon">fault</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_logger_.logger.html#info" class="tsd-kind-icon">info</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_logger_.logger.html#log" class="tsd-kind-icon">log</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_logger_.logger.html#logdisable" class="tsd-kind-icon">log<wbr>Disable</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_logger_.logger.html#logenable" class="tsd-kind-icon">log<wbr>Enable</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_logger_.logger.html#logoutputall" class="tsd-kind-icon">log<wbr>Output<wbr>All</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_logger_.logger.html#logger" class="tsd-kind-icon">logger</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_logger_.logger.html#note" class="tsd-kind-icon">note</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_logger_.logger.html#warn" class="tsd-kind-icon">warn</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_logger_.logger.html#logger" class="tsd-kind-icon">logger</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_logger_.logger.html#note" class="tsd-kind-icon">note</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_logger_.logger.html#warn" class="tsd-kind-icon">warn</a></li>
 							</ul>
 						</section>
 					</div>
@@ -141,7 +147,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/19ceda2/src/logger.ts#L11">logger.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/31c1492/src/logger.ts#L12">logger.ts:12</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -156,17 +162,16 @@
 								</li>
 								<li>
 									<h5>tags: <a href="../modules/_types_.html#tlogtag" class="tsd-signature-type">tLogTag</a><span class="tsd-signature-symbol">[]</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<div class="lead">
-											<p>tags</p>
-										</div>
-									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> enabledTags: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> faultTimout: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;10000</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_logger_.logger.html" class="tsd-signature-type">logger</a></h4>
@@ -182,7 +187,7 @@
 					<div class="tsd-signature tsd-kind-icon">drivers<span class="tsd-signature-symbol">:</span> <a href="_logdriverbase_.logdriverbase.html" class="tsd-signature-type">logDriverBase</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/19ceda2/src/logger.ts#L18">logger.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/31c1492/src/logger.ts#L20">logger.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -192,24 +197,35 @@
 					<div class="tsd-signature tsd-kind-icon">fault<wbr>Timout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/19ceda2/src/logger.ts#L18">logger.ts:18</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="tags" class="tsd-anchor"></a>
-					<h3>tags</h3>
-					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <a href="../modules/_types_.html#tlogtag" class="tsd-signature-type">tLogTag</a><span class="tsd-signature-symbol">[]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/19ceda2/src/logger.ts#L18">logger.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/31c1492/src/logger.ts#L20">logger.ts:20</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>tags</p>
 						</div>
 					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="level" class="tsd-anchor"></a>
+					<h3>level</h3>
+					<div class="tsd-signature tsd-kind-icon">level<span class="tsd-signature-symbol">:</span> <a href="../enums/_types_.tloglevel.html" class="tsd-signature-type">tLogLevel</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#level">level</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/31c1492/src/tLogger.ts#L10">tLogger.ts:10</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a name="tags" class="tsd-anchor"></a>
+					<h3>tags</h3>
+					<div class="tsd-signature tsd-kind-icon">tags<span class="tsd-signature-symbol">:</span> <a href="../modules/_types_.html#tlogtag" class="tsd-signature-type">tLogTag</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#tags">tags</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/31c1492/src/logger.ts#L20">logger.ts:20</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -224,24 +240,25 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/19ceda2/src/logger.ts#L81">logger.ts:81</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/31c1492/src/logger.ts#L84">logger.ts:84</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="debug" class="tsd-anchor"></a>
 					<h3>debug</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">debug<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#debug">debug</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/19ceda2/src/logger.ts#L32">logger.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/31c1492/src/logger.ts#L35">logger.ts:35</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -258,17 +275,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="error" class="tsd-anchor"></a>
 					<h3>error</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">error<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#error">error</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/19ceda2/src/logger.ts#L67">logger.ts:67</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/31c1492/src/logger.ts#L70">logger.ts:70</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -285,17 +303,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="fault" class="tsd-anchor"></a>
 					<h3>fault</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">fault<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#fault">fault</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/19ceda2/src/logger.ts#L74">logger.ts:74</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/31c1492/src/logger.ts#L77">logger.ts:77</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -312,17 +331,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="info" class="tsd-anchor"></a>
 					<h3>info</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">info<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#info">info</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/19ceda2/src/logger.ts#L46">logger.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/31c1492/src/logger.ts#L49">logger.ts:49</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -339,17 +359,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="log" class="tsd-anchor"></a>
 					<h3>log</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">log<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#log">log</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/19ceda2/src/logger.ts#L39">logger.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/31c1492/src/logger.ts#L42">logger.ts:42</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -376,7 +397,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/19ceda2/src/logger.ts#L102">logger.ts:102</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/31c1492/src/logger.ts#L106">logger.ts:106</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -399,7 +420,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/19ceda2/src/logger.ts#L97">logger.ts:97</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/31c1492/src/logger.ts#L101">logger.ts:101</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -422,7 +443,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/19ceda2/src/logger.ts#L23">logger.ts:23</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/31c1492/src/logger.ts#L26">logger.ts:26</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -441,17 +462,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="logger" class="tsd-anchor"></a>
 					<h3>logger</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">logger<span class="tsd-signature-symbol">(</span>tags<span class="tsd-signature-symbol">: </span><a href="../modules/_types_.html#tlogtag" class="tsd-signature-type">tLogTag</a><span class="tsd-signature-symbol">[]</span>, enabledTags<span class="tsd-signature-symbol">?: </span><a href="../modules/_types_.html#tlogtag" class="tsd-signature-type">tLogTag</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_logger_.logger.html" class="tsd-signature-type">logger</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#logger">logger</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/19ceda2/src/logger.ts#L93">logger.ts:93</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/31c1492/src/logger.ts#L97">logger.ts:97</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -463,30 +485,31 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>tags: <a href="../modules/_types_.html#tlogtag" class="tsd-signature-type">tLogTag</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> enabledTags: <a href="../modules/_types_.html#tlogtag" class="tsd-signature-type">tLogTag</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
 										</div>
 									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> enabledTags: <a href="../modules/_types_.html#tlogtag" class="tsd-signature-type">tLogTag</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_logger_.logger.html" class="tsd-signature-type">logger</a></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="note" class="tsd-anchor"></a>
 					<h3>note</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">note<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#note">note</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/19ceda2/src/logger.ts#L53">logger.ts:53</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/31c1492/src/logger.ts#L56">logger.ts:56</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -503,17 +526,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="warn" class="tsd-anchor"></a>
 					<h3>warn</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">warn<span class="tsd-signature-symbol">(</span>msg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#warn">warn</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/19ceda2/src/logger.ts#L60">logger.ts:60</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/31c1492/src/logger.ts#L63">logger.ts:63</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -557,6 +581,9 @@
 						<a href="../modules/_logger_.html">"logger"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="../modules/_tlogger_.html">"t<wbr>Logger"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_types_.html">"types"</a>
 					</li>
 				</ul>
@@ -577,25 +604,28 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_logger_.logger.html#faulttimout" class="tsd-kind-icon">fault<wbr>Timout</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="_logger_.logger.html#level" class="tsd-kind-icon">level</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 								<a href="_logger_.logger.html#tags" class="tsd-kind-icon">tags</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
 								<a href="_logger_.logger.html#completetransferandexit" class="tsd-kind-icon">complete<wbr>Transfer<wbr>And<wbr>Exit</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="_logger_.logger.html#debug" class="tsd-kind-icon">debug</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="_logger_.logger.html#error" class="tsd-kind-icon">error</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="_logger_.logger.html#fault" class="tsd-kind-icon">fault</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="_logger_.logger.html#info" class="tsd-kind-icon">info</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="_logger_.logger.html#log" class="tsd-kind-icon">log</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -607,13 +637,13 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
 								<a href="_logger_.logger.html#logoutputall" class="tsd-kind-icon">log<wbr>Output<wbr>All</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="_logger_.logger.html#logger" class="tsd-kind-icon">logger</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="_logger_.logger.html#note" class="tsd-kind-icon">note</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="_logger_.logger.html#warn" class="tsd-kind-icon">warn</a>
 							</li>
 						</ul>
