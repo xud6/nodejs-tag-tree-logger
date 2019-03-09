@@ -1,6 +1,7 @@
 import { logDriverBase } from "./logDriverBase";
 import { tLogTag, tLogLevel } from "./types";
 import { forEach, union } from "lodash";
+import { tLogger } from "./tLogger";
 
 /**
  * standard logger implitation
@@ -8,7 +9,7 @@ import { forEach, union } from "lodash";
  * @export
  * @implements {loggerAPI}
  */
-export class logger {
+export class logger extends tLogger {
     /**
      * Creates an instance of logger.
      * @param drivers 
@@ -17,6 +18,7 @@ export class logger {
      * @param faultTimout 
      */
     constructor(readonly drivers: logDriverBase[], readonly tags: tLogTag[], enabledTags: string[] = [], readonly faultTimout: number = 10000) {
+        super()
         forEach(drivers, (driver) => {
             driver.logEnable(enabledTags);
         })
