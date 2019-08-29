@@ -35,6 +35,8 @@ export class logDriverConsole extends logDriverBase {
     }
     private genStringLogLevel(level: tLogLevel): string {
         switch (level) {
+            case tLogLevel.debug:
+                return this.chalk.bgBlack.gray("DEBUG")
             case tLogLevel.log:
                 return this.chalk.bgWhite.black("LOG  ")
             case tLogLevel.note:
