@@ -27,14 +27,14 @@
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.14.16",
     "chai": "^4.2.0",
-    "del": "^4.0.0",
+    "del": "^5.1.0",
     "gulp": "^4.0.0",
-    "gulp-mocha": "^6.0.0",
+    "gulp-mocha": "^7.0.1",
     "gulp-typescript": "^5.0.0",
     "merge2": "^1.2.3",
     "mocha": "^6.0.0",
     "ts-node": "^8.0.1",
-    "typedoc": "^0.14.2",
+    "typedoc": "^0.15.0",
     "typescript": "^3.2.2"
   },
   "dependencies": {
