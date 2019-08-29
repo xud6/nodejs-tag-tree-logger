@@ -31,7 +31,6 @@
     "gulp": "^4.0.0",
     "gulp-mocha": "^6.0.0",
     "gulp-typescript": "^5.0.0",
-    "jsdoc-to-markdown": "^4.0.0",
     "merge2": "^1.2.3",
     "mocha": "^6.0.0",
     "ts-node": "^8.0.1",
