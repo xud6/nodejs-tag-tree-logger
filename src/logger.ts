@@ -3,6 +3,10 @@ import { tLogTag, tLogLevel } from "./types";
 import { forEach, union } from "lodash";
 import { tLogger, logGenerator } from "./tLogger";
 
+export interface tHooks {
+    beforeFaultExitProcess?: () => Promise<void> | void
+}
+
 /**
  * standard logger implitation
  * 
@@ -16,8 +20,9 @@ export class logger extends tLogger {
      * @param tags 
      * @param enabledTags 
      * @param faultTimout 
+     * @param hooks
      */
-    constructor(readonly drivers: logDriverBase[], readonly tags: tLogTag[], enabledTags: string[] = [], readonly faultTimout: number = 10000) {
+    constructor(readonly drivers: logDriverBase[], readonly tags: tLogTag[], enabledTags: string[] = [], readonly faultTimout: number = 10000, readonly hooks?: tHooks) {
         super()
         forEach(drivers, (driver) => {
             driver.logEnable(enabledTags);
@@ -77,25 +82,30 @@ export class logger extends tLogger {
      * 
      * @param {logGenerator | any} msg
      */
-    readonly fault = (msg: logGenerator | any) => {
+    readonly fault = async (msg: logGenerator | any) => {
         this.logOutputAll(tLogLevel.fault, this.tags, msg)
+        this.logOutputAll(tLogLevel.fault, [], "Process will exit because of a fault")
         setTimeout(() => {
             process.exit(-1);
         }, this.faultTimout)
-        return this.completeTransferAndExit();
+        await this.completeLogTransfer();
+        if (this.hooks && this.hooks.beforeFaultExitProcess) {
+            await this.hooks.beforeFaultExitProcess();
+            await this.completeLogTransfer();
+        }
+        process.exit(-1);
     }
-    private async completeTransferAndExit() {
-        let handlers = this.drivers.map((driver)=>{
+    private async completeLogTransfer() {
+        let handlers = this.drivers.map((driver) => {
             return driver.completeTransfer();
         })
-        for(let handler of handlers){
-            try{
+        for (let handler of handlers) {
+            try {
                 await handler
-            }catch(e){
+            } catch (e) {
                 console.error(e)
             }
         }
-        process.exit(-1);
     }
     /**
      * Create a sub logger instance include all tags of parent and use same log driver
@@ -103,7 +113,7 @@ export class logger extends tLogger {
      * @param {string[]} enabledTags
      */
     readonly logger = (tags: tLogTag[], enabledTags: tLogTag[] = []) => {
-        return new logger(this.drivers, union(this.tags, tags), enabledTags);
+        return new logger(this.drivers, union(this.tags, tags), enabledTags, this.faultTimout, this.hooks);
     }
 
     async logEnable(tags: string[]) {
