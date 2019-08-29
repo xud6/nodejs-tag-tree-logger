@@ -85,11 +85,16 @@ export class logger extends tLogger {
         return this.completeTransferAndExit();
     }
     private async completeTransferAndExit() {
-        try {
-            for (let driver of this.drivers) {
-                await driver.completeTransfer()
+        let handlers = this.drivers.map((driver)=>{
+            return driver.completeTransfer();
+        })
+        for(let handler of handlers){
+            try{
+                await handler
+            }catch(e){
+                console.error(e)
             }
-        } catch (e) { }
+        }
         process.exit(-1);
     }
     /**
