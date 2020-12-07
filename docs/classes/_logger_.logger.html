@@ -109,16 +109,19 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_logger_.logger.html#drivers" class="tsd-kind-icon">drivers</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_logger_.logger.html#driverholder" class="tsd-kind-icon">driver<wbr>Holder</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_logger_.logger.html#existdriverholder" class="tsd-kind-icon">exist<wbr>Driver<wbr>Holder</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_logger_.logger.html#faulttimout" class="tsd-kind-icon">fault<wbr>Timout</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_logger_.logger.html#hooks" class="tsd-kind-icon">hooks</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_logger_.logger.html#level" class="tsd-kind-icon">level</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_logger_.logger.html#paramdrivers" class="tsd-kind-icon">param<wbr>Drivers</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="_logger_.logger.html#tags" class="tsd-kind-icon">tags</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_logger_.logger.html#addlogdriver" class="tsd-kind-icon">add<wbr>Log<wbr>Driver</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_logger_.logger.html#completelogtransfer" class="tsd-kind-icon">complete<wbr>Log<wbr>Transfer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_logger_.logger.html#debug" class="tsd-kind-icon">debug</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_logger_.logger.html#error" class="tsd-kind-icon">error</a></li>
@@ -142,14 +145,14 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new logger<span class="tsd-signature-symbol">(</span>drivers<span class="tsd-signature-symbol">: </span><a href="_logdriverbase_.logdriverbase.html" class="tsd-signature-type">logDriverBase</a><span class="tsd-signature-symbol">[]</span>, tags<span class="tsd-signature-symbol">: </span><a href="../modules/_types_.html#tlogtag" class="tsd-signature-type">tLogTag</a><span class="tsd-signature-symbol">[]</span>, enabledTags<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, faultTimout<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, hooks<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_logger_.thooks.html" class="tsd-signature-type">tHooks</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_logger_.logger.html" class="tsd-signature-type">logger</a></li>
+						<li class="tsd-signature tsd-kind-icon">new logger<span class="tsd-signature-symbol">(</span>paramDrivers<span class="tsd-signature-symbol">: </span><a href="_logdriverbase_.logdriverbase.html" class="tsd-signature-type">logDriverBase</a><span class="tsd-signature-symbol">[]</span>, tags<span class="tsd-signature-symbol">: </span><a href="../modules/_types_.html#tlogtag" class="tsd-signature-type">tLogTag</a><span class="tsd-signature-symbol">[]</span>, enabledTags<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, faultTimout<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, hooks<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_logger_.thooks.html" class="tsd-signature-type">tHooks</a>, existDriverHolder<span class="tsd-signature-symbol">?: </span><a href="_logger_.logger.html#driverholder" class="tsd-signature-type">driverHolder</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_logger_.logger.html" class="tsd-signature-type">logger</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/c688628/src/logger.ts#L17">logger.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/logger.ts#L31">logger.ts:31</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -160,7 +163,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>drivers: <a href="_logdriverbase_.logdriverbase.html" class="tsd-signature-type">logDriverBase</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>paramDrivers: <a href="_logdriverbase_.logdriverbase.html" class="tsd-signature-type">logDriverBase</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 								<li>
 									<h5>tags: <a href="../modules/_types_.html#tlogtag" class="tsd-signature-type">tLogTag</a><span class="tsd-signature-symbol">[]</span></h5>
@@ -178,6 +181,9 @@
 										</div>
 									</div>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> existDriverHolder: <a href="_logger_.logger.html#driverholder" class="tsd-signature-type">driverHolder</a></h5>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_logger_.logger.html" class="tsd-signature-type">logger</a></h4>
 						</li>
@@ -187,12 +193,22 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="drivers" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> drivers</h3>
-					<div class="tsd-signature tsd-kind-icon">drivers<span class="tsd-signature-symbol">:</span> <a href="_logdriverbase_.logdriverbase.html" class="tsd-signature-type">logDriverBase</a><span class="tsd-signature-symbol">[]</span></div>
+					<a name="driverholder" class="tsd-anchor"></a>
+					<h3>driver<wbr>Holder</h3>
+					<div class="tsd-signature tsd-kind-icon">driver<wbr>Holder<span class="tsd-signature-symbol">:</span> <a href="_logger_.driverholder.html" class="tsd-signature-type">driverHolder</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/c688628/src/logger.ts#L26">logger.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/logger.ts#L31">logger.ts:31</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="existdriverholder" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> exist<wbr>Driver<wbr>Holder</h3>
+					<div class="tsd-signature tsd-kind-icon">exist<wbr>Driver<wbr>Holder<span class="tsd-signature-symbol">:</span> <a href="_logger_.logger.html#driverholder" class="tsd-signature-type">driverHolder</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/logger.ts#L40">logger.ts:40</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -202,7 +218,7 @@
 					<div class="tsd-signature tsd-kind-icon">fault<wbr>Timout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/c688628/src/logger.ts#L26">logger.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/logger.ts#L40">logger.ts:40</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -212,7 +228,7 @@
 					<div class="tsd-signature tsd-kind-icon">hooks<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_logger_.thooks.html" class="tsd-signature-type">tHooks</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/c688628/src/logger.ts#L26">logger.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/logger.ts#L40">logger.ts:40</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -227,7 +243,17 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#level">level</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/c688628/src/tLogger.ts#L14">tLogger.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/tLogger.ts#L14">tLogger.ts:14</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="paramdrivers" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> param<wbr>Drivers</h3>
+					<div class="tsd-signature tsd-kind-icon">param<wbr>Drivers<span class="tsd-signature-symbol">:</span> <a href="_logdriverbase_.logdriverbase.html" class="tsd-signature-type">logDriverBase</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/logger.ts#L40">logger.ts:40</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -238,13 +264,36 @@
 					<aside class="tsd-sources">
 						<p>Overrides <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#tags">tags</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/c688628/src/logger.ts#L26">logger.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/logger.ts#L40">logger.ts:40</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addlogdriver" class="tsd-anchor"></a>
+					<h3>add<wbr>Log<wbr>Driver</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Log<wbr>Driver<span class="tsd-signature-symbol">(</span>d<span class="tsd-signature-symbol">: </span><a href="_logdriverbase_.logdriverbase.html" class="tsd-signature-type">logDriverBase</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/logger.ts#L153">logger.ts:153</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>d: <a href="_logdriverbase_.logdriverbase.html" class="tsd-signature-type">logDriverBase</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
 					<a name="completelogtransfer" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> complete<wbr>Log<wbr>Transfer</h3>
@@ -255,7 +304,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/c688628/src/logger.ts#L99">logger.ts:99</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/logger.ts#L122">logger.ts:122</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -273,7 +322,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#debug">debug</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/c688628/src/logger.ts#L44">logger.ts:44</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/logger.ts#L67">logger.ts:67</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -306,7 +355,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#error">error</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/c688628/src/logger.ts#L79">logger.ts:79</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/logger.ts#L102">logger.ts:102</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -339,7 +388,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#fault">fault</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/c688628/src/logger.ts#L86">logger.ts:86</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/logger.ts#L109">logger.ts:109</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -372,7 +421,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#info">info</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/c688628/src/logger.ts#L58">logger.ts:58</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/logger.ts#L81">logger.ts:81</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -405,7 +454,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#log">log</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/c688628/src/logger.ts#L51">logger.ts:51</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/logger.ts#L74">logger.ts:74</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -437,7 +486,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/c688628/src/logger.ts#L125">logger.ts:125</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/logger.ts#L148">logger.ts:148</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -460,7 +509,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/c688628/src/logger.ts#L120">logger.ts:120</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/logger.ts#L143">logger.ts:143</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -483,7 +532,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/c688628/src/logger.ts#L32">logger.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/logger.ts#L55">logger.ts:55</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -516,7 +565,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#logger">logger</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/c688628/src/logger.ts#L116">logger.ts:116</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/logger.ts#L139">logger.ts:139</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -552,7 +601,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#note">note</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/c688628/src/logger.ts#L65">logger.ts:65</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/logger.ts#L88">logger.ts:88</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -585,7 +634,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_tlogger_.tlogger.html">tLogger</a>.<a href="_tlogger_.tlogger.html#warn">warn</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/c688628/src/logger.ts#L72">logger.ts:72</a></li>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/9eb44bc/src/logger.ts#L95">logger.ts:95</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -646,6 +695,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
+						<a href="_logger_.driverholder.html" class="tsd-kind-icon">driver<wbr>Holder</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
@@ -655,7 +707,10 @@
 								<a href="_logger_.logger.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_logger_.logger.html#drivers" class="tsd-kind-icon">drivers</a>
+								<a href="_logger_.logger.html#driverholder" class="tsd-kind-icon">driver<wbr>Holder</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_logger_.logger.html#existdriverholder" class="tsd-kind-icon">exist<wbr>Driver<wbr>Holder</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_logger_.logger.html#faulttimout" class="tsd-kind-icon">fault<wbr>Timout</a>
@@ -666,8 +721,14 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="_logger_.logger.html#level" class="tsd-kind-icon">level</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="_logger_.logger.html#paramdrivers" class="tsd-kind-icon">param<wbr>Drivers</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
 								<a href="_logger_.logger.html#tags" class="tsd-kind-icon">tags</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_logger_.logger.html#addlogdriver" class="tsd-kind-icon">add<wbr>Log<wbr>Driver</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
 								<a href="_logger_.logger.html#completelogtransfer" class="tsd-kind-icon">complete<wbr>Log<wbr>Transfer</a>
