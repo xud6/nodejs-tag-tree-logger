@@ -12,7 +12,8 @@
     "build": "gulp build",
     "prepublishOnly": "gulp prePublish",
     "version": "typedoc --out docs src && git add -A docs",
-    "debug": "ts-node debug/index.ts"
+    "debug": "ts-node debug/index.ts",
+    "npminstall": "npm install --registry https://registry.npmjs.com"
   },
   "repository": {
     "type": "git",
