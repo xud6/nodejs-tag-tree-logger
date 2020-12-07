@@ -10,7 +10,10 @@ export type logGenerator = () => tLogMsg
  * @interface loggerAPI
  */
 export abstract class tLogger {
+    // for backward compatibility only
+    level: tLogLevel
     constructor(readonly tags: string[]) {
+        this.level = tLogLevel.note
     }
     abstract readonly debug: (msg: logGenerator | tLogMsg, data?: unknown) => void
     abstract readonly log: (msg: logGenerator | tLogMsg, data?: unknown) => void
