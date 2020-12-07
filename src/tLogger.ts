@@ -1,6 +1,6 @@
 import { tLogLevel, tLogTag } from "./types";
 
-export type tLogMsg = string
+export type tLogMsg = string | unknown
 export type logGenerator = () => tLogMsg
 
 /**
