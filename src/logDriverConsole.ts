@@ -17,7 +17,7 @@ export class logDriverConsole extends logDriverBase {
         this.chalk = new chalk.Instance(chalkoptions)
         this.avaliableTagColors = [this.chalk.green, this.chalk.yellow, this.chalk.blue, this.chalk.cyan, this.chalk.red, this.chalk.magenta, this.chalk.gray]
     }
-    output(level: tLogLevel, tags: string[], msg: any, timestamp: Date, data: any) {
+    output(level: tLogLevel, tags: string[], msg: unknown, timestamp: Date, data: unknown) {
         if (level >= tLogLevel.log) {
             if (!this.logFilter(tags)) {
                 // log disabled

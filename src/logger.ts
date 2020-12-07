@@ -28,7 +28,7 @@ export class logger extends tLogger {
             driver.logEnable(enabledTags);
         })
     }
-    private logOutputAll(level: tLogLevel, tags: tLogTag[], msg: logGenerator | any, data: any) {
+    private logOutputAll(level: tLogLevel, tags: tLogTag[], msg: logGenerator | unknown, data: unknown) {
         if (typeof msg === "function") {
             msg = msg()
         }
@@ -38,51 +38,51 @@ export class logger extends tLogger {
     }
     /**
      * 
-     * @param {logGenerator | any} msg
+     * @param {logGenerator | unknown} msg
      */
-    readonly debug = (msg: logGenerator | any, data?: any) => {
+    readonly debug = (msg: logGenerator | unknown, data?: unknown) => {
         this.logOutputAll(tLogLevel.debug, this.tags, msg, data)
     }
     /**
      * 
-     * @param {logGenerator | any} msg
+     * @param {logGenerator | unknown} msg
      */
-    readonly log = (msg: logGenerator | any, data?: any) => {
+    readonly log = (msg: logGenerator | unknown, data?: unknown) => {
         this.logOutputAll(tLogLevel.log, this.tags, msg, data)
     }
     /**
      * 
-     * @param {logGenerator | any} msg
+     * @param {logGenerator | unknown} msg
      */
-    readonly info = (msg: logGenerator | any, data?: any) => {
+    readonly info = (msg: logGenerator | unknown, data?: unknown) => {
         this.logOutputAll(tLogLevel.note, this.tags, msg, data)
     }
     /**
      * 
-     * @param {logGenerator | any} msg
+     * @param {logGenerator | unknown} msg
      */
-    readonly note = (msg: logGenerator | any, data?: any) => {
+    readonly note = (msg: logGenerator | unknown, data?: unknown) => {
         this.logOutputAll(tLogLevel.note, this.tags, msg, data)
     }
     /**
      * 
-     * @param {logGenerator | any} msg
+     * @param {logGenerator | unknown} msg
      */
-    readonly warn = (msg: logGenerator | any, data?: any) => {
+    readonly warn = (msg: logGenerator | unknown, data?: unknown) => {
         this.logOutputAll(tLogLevel.warn, this.tags, msg, data)
     }
     /**
      * 
-     * @param {logGenerator | any} msg
+     * @param {logGenerator | unknown} msg
      */
-    readonly error = (msg: logGenerator | any, data?: any) => {
+    readonly error = (msg: logGenerator | unknown, data?: unknown) => {
         this.logOutputAll(tLogLevel.error, this.tags, msg, data)
     }
     /**
      * 
-     * @param {logGenerator | any} msg
+     * @param {logGenerator | unknown} msg
      */
-    readonly fault = async (msg: logGenerator | any, data?: any) => {
+    readonly fault = async (msg: logGenerator | unknown, data?: unknown) => {
         this.logOutputAll(tLogLevel.fault, this.tags, msg, data)
         this.logOutputAll(tLogLevel.fault, [], "Process will exit because of a fault", data)
         setTimeout(() => {
