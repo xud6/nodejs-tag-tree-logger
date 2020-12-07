@@ -23,7 +23,7 @@ export class logger extends tLogger {
      * @param hooks
      */
     constructor(readonly drivers: logDriverBase[], readonly tags: tLogTag[], enabledTags: string[] = [], readonly faultTimout: number = 10000, readonly hooks?: tHooks) {
-        super()
+        super(tags)
         forEach(drivers, (driver) => {
             driver.logEnable(enabledTags);
         })

@@ -9,8 +9,8 @@ export type logGenerator = () => any
  * @interface loggerAPI
  */
 export abstract class tLogger {
-    level: tLogLevel
-    readonly tags: string[]
+    constructor(readonly tags: string[]) {
+    }
     abstract readonly debug: (msg: logGenerator | any) => void
     abstract readonly log: (msg: logGenerator | any) => void
     abstract readonly note: (msg: logGenerator | any) => void
