@@ -25,9 +25,6 @@ export class logDriverConsole extends logDriverBase {
             }
         }
         console.log(timestamp.toISOString() + ' ' + this.genStringLogLevel(level) + "[" + this.genStringTags(tags) + "] " + msg)
-        if (data) {
-            console.log(format(data))
-        }
     }
     completeTransfer() { }
     private logEnabledTags: string[] = []
