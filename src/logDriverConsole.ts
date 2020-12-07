@@ -10,7 +10,11 @@ export class logDriverConsole extends logDriverBase {
     private avaliableTagColorCnt = 0
     constructor(readonly colorEnable: boolean = true) {
         super()
-        this.chalk = new chalk.constructor({ enabled: colorEnable })
+        let chalkoptions: chalk.Options = {}
+        if (colorEnable == false) {
+            chalkoptions.level = 0;
+        }
+        this.chalk = new chalk.Instance(chalkoptions)
         this.avaliableTagColors = [this.chalk.green, this.chalk.yellow, this.chalk.blue, this.chalk.cyan, this.chalk.red, this.chalk.magenta, this.chalk.gray]
     }
     output(level: tLogLevel, tags: string[], msg: any, timestamp: Date) {
