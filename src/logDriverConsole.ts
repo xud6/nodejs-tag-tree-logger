@@ -17,14 +17,17 @@ export class logDriverConsole extends logDriverBase {
         this.chalk = new chalk.Instance(chalkoptions)
         this.avaliableTagColors = [this.chalk.green, this.chalk.yellow, this.chalk.blue, this.chalk.cyan, this.chalk.red, this.chalk.magenta, this.chalk.gray]
     }
-    output(level: tLogLevel, tags: string[], msg: unknown, timestamp: Date, data: unknown) {
+    output(level: tLogLevel, tags: string[], msg: string, timestamp: Date, data?: unknown) {
         if (level >= tLogLevel.log) {
             if (!this.logFilter(tags)) {
                 // log disabled
                 return;
             }
         }
-        console.log(timestamp.toISOString() + ' ' + this.genStringLogLevel(level) + "[" + this.genStringTags(tags) + "] " + format(msg))
+        console.log(timestamp.toISOString() + ' ' + this.genStringLogLevel(level) + "[" + this.genStringTags(tags) + "] " + msg)
+        if (data) {
+            console.log(format(data))
+        }
     }
     completeTransfer() { }
     private logEnabledTags: string[] = []

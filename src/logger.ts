@@ -2,6 +2,7 @@ import { logDriverBase } from "./logDriverBase";
 import { tLogTag, tLogLevel } from "./types";
 import { forEach, union } from "lodash";
 import { tLogger, logGenerator } from "./tLogger";
+import { formatMsg } from "./formatMsg";
 
 export interface tHooks {
     beforeFaultExitProcess?: () => Promise<void> | void
@@ -33,7 +34,7 @@ export class logger extends tLogger {
             msg = msg()
         }
         forEach(this.drivers, (driver) => {
-            driver.output(level, tags, msg, new Date(), data)
+            driver.output(level, tags, formatMsg(msg), new Date(), data)
         })
     }
     /**
