@@ -150,6 +150,9 @@ export class logger extends tLogger {
             await driver.logDisable(tags);
         }
     }
+    addLogDriver(d: logDriverBase) {
+        this.driverHolder.add(d)
+    }
 }
 
 export let cLogger = logger
