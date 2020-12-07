@@ -8,6 +8,19 @@ export interface tHooks {
     beforeFaultExitProcess?: () => Promise<void> | void
 }
 
+class driverHolder {
+    drivers: logDriverBase[]
+    constructor() {
+        this.drivers = []
+    }
+    add(d: logDriverBase) {
+        this.drivers.push(d)
+    }
+    get() {
+        return this.drivers;
+    }
+}
+
 /**
  * standard logger implitation
  * 
@@ -15,6 +28,7 @@ export interface tHooks {
  * @implements {loggerAPI}
  */
 export class logger extends tLogger {
+    driverHolder: driverHolder
     /**
      * Creates an instance of logger.
      * @param drivers 
@@ -23,9 +37,18 @@ export class logger extends tLogger {
      * @param faultTimout 
      * @param hooks
      */
-    constructor(readonly drivers: logDriverBase[], readonly tags: tLogTag[], enabledTags: string[] = [], readonly faultTimout: number = 10000, readonly hooks?: tHooks) {
+    constructor(readonly paramDrivers: logDriverBase[], readonly tags: tLogTag[], enabledTags: string[] = [], readonly faultTimout: number = 10000, readonly hooks?: tHooks, readonly existDriverHolder?: driverHolder) {
         super(tags)
-        forEach(drivers, (driver) => {
+        if (existDriverHolder) {
+            this.driverHolder = existDriverHolder
+        } else {
+            this.driverHolder = new driverHolder();
+        }
+        for (let d of paramDrivers) {
+            this.driverHolder.add(d);
+        }
+
+        forEach(this.driverHolder.get(), (driver) => {
             driver.logEnable(enabledTags);
         })
     }
@@ -33,7 +56,7 @@ export class logger extends tLogger {
         if (typeof msg === "function") {
             msg = msg()
         }
-        forEach(this.drivers, (driver) => {
+        forEach(this.driverHolder.get(), (driver) => {
             driver.output(level, tags, formatMsg(msg), new Date(), data)
         })
     }
@@ -97,7 +120,7 @@ export class logger extends tLogger {
         process.exit(-1);
     }
     private async completeLogTransfer() {
-        let handlers = this.drivers.map((driver) => {
+        let handlers = this.driverHolder.get().map((driver) => {
             return driver.completeTransfer();
         })
         for (let handler of handlers) {
@@ -114,16 +137,16 @@ export class logger extends tLogger {
      * @param {string[]} enabledTags
      */
     readonly logger = (tags: tLogTag[], enabledTags: tLogTag[] = []) => {
-        return new logger(this.drivers, union(this.tags, tags), enabledTags, this.faultTimout, this.hooks);
+        return new logger([], union(this.tags, tags), enabledTags, this.faultTimout, this.hooks, this.driverHolder);
     }
 
     async logEnable(tags: string[]) {
-        for (let driver of this.drivers) {
+        for (let driver of this.driverHolder.get()) {
             await driver.logEnable(tags);
         }
     }
     async logDisable(tags: string[]) {
-        for (let driver of this.drivers) {
+        for (let driver of this.driverHolder.get()) {
             await driver.logDisable(tags);
         }
     }
