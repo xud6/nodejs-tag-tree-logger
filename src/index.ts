@@ -3,4 +3,4 @@ export * from './tLogger'
 export * from './logger'
 export * from './blankLogger'
 export * from './logDriverConsole'
-
+export * from './logDriverBase'
