@@ -9,17 +9,19 @@ class cLogDriverTest extends logDriverBase {
         msg?: any,
         level?: tLogLevel,
         tags?: string[],
-        timestamp?: Date
+        timestamp?: Date,
+        data?: any
     }
     constructor(readonly colorEnable: boolean = true) {
         super()
         this.currentLog = {}
     }
-    output(level: tLogLevel, tags: string[], msg: any, timestamp: Date) {
+    output(level: tLogLevel, tags: string[], msg: any, timestamp: Date, data: any) {
         this.currentLog.level = level;
         this.currentLog.tags = tags;
         this.currentLog.msg = msg;
         this.currentLog.timestamp = timestamp;
+        this.currentLog.data = data
     }
     completeTransfer() { }
     logEnable() {
@@ -45,21 +47,28 @@ describe('logger test', () => {
         expect(logDriverTest.currentLog.tags).to.deep.equal(["TEST"]);
     })
     it('should log object', () => {
-        slogger.note({packet:"log",no:321})
-        expect(logDriverTest.currentLog.msg).to.deep.equal({packet:"log",no:321});
+        slogger.note({ packet: "log", no: 321 })
+        expect(logDriverTest.currentLog.msg).to.deep.equal({ packet: "log", no: 321 });
         expect(logDriverTest.currentLog.level).to.equal(tLogLevel.note);
         expect(logDriverTest.currentLog.tags).to.deep.equal(["TEST"]);
     })
     it('should log array', () => {
-        slogger.warn(["32",123,{p:1,t:"11"}])
-        expect(logDriverTest.currentLog.msg).to.deep.equal(["32",123,{p:1,t:"11"}]);
+        slogger.warn(["32", 123, { p: 1, t: "11" }])
+        expect(logDriverTest.currentLog.msg).to.deep.equal(["32", 123, { p: 1, t: "11" }]);
         expect(logDriverTest.currentLog.level).to.equal(tLogLevel.warn);
         expect(logDriverTest.currentLog.tags).to.deep.equal(["TEST"]);
     })
     it('should execute function and log object', () => {
-        slogger.error(()=>{return {packet:"log33",no:32221}})
-        expect(logDriverTest.currentLog.msg).to.deep.equal({packet:"log33",no:32221});
+        slogger.error(() => { return { packet: "log33", no: 32221 } })
+        expect(logDriverTest.currentLog.msg).to.deep.equal({ packet: "log33", no: 32221 });
         expect(logDriverTest.currentLog.level).to.equal(tLogLevel.error);
         expect(logDriverTest.currentLog.tags).to.deep.equal(["TEST"]);
+    })
+    it('should log optional data', () => {
+        slogger.log("should log optional data", { data: "testData", test: true })
+        expect(logDriverTest.currentLog.msg).to.equal("should log optional data");
+        expect(logDriverTest.currentLog.level).to.equal(tLogLevel.log);
+        expect(logDriverTest.currentLog.tags).to.deep.equal(["TEST"]);
+        expect(logDriverTest.currentLog.data).to.deep.equal({ data: "testData", test: true });
     })
 })
