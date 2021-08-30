@@ -3,10 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;logDriverConsole&quot; | tag-tree-logger</title>
+	<title>tHooks | tag-tree-logger</title>
 	<meta name="description" content="Documentation for tag-tree-logger">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
 </head>
 <body>
 <header>
@@ -40,8 +41,6 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -53,94 +52,118 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../modules.html">tag-tree-logger</a>
 				</li>
 				<li>
-					<a href="_logdriverconsole_.html">&quot;logDriverConsole&quot;</a>
+					<a href="../modules/logger.html">logger</a>
+				</li>
+				<li>
+					<a href="logger.tHooks.html">tHooks</a>
 				</li>
 			</ul>
-			<h1>Module &quot;logDriverConsole&quot;</h1>
+			<h1>Interface tHooks</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">tHooks</span>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Classes</h3>
+							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_logdriverconsole_.logdriverconsole.html" class="tsd-kind-icon">log<wbr>Driver<wbr>Console</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Variables</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_logdriverconsole_.html#clogdriverconsole" class="tsd-kind-icon">c<wbr>Log<wbr>Driver<wbr>Console</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="logger.tHooks.html#beforeFaultExitProcess" class="tsd-kind-icon">before<wbr>Fault<wbr>Exit<wbr>Process</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Variables</h2>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module">
-					<a name="clogdriverconsole" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagLet">Let</span> c<wbr>Log<wbr>Driver<wbr>Console</h3>
-					<div class="tsd-signature tsd-kind-icon">c<wbr>Log<wbr>Driver<wbr>Console<span class="tsd-signature-symbol">:</span> <a href="../classes/_logdriverconsole_.logdriverconsole.html" class="tsd-signature-type">logDriverConsole</a><span class="tsd-signature-symbol"> = logDriverConsole</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/3507203/src/logDriverConsole.ts#L89">logDriverConsole.ts:89</a></li>
-						</ul>
-					</aside>
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="beforeFaultExitProcess" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> before<wbr>Fault<wbr>Exit<wbr>Process</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">before<wbr>Fault<wbr>Exit<wbr>Process<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/xud6/nodejs-tag-tree-logger/blob/4d4ce5c/src/logger.ts#L8">src/logger.ts:8</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+					<li class=" ">
+						<a href="../modules.html">Modules</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_blanklogger_.html">&quot;blank<wbr>Logger&quot;</a>
+						<a href="../modules/blankLogger.html">blank<wbr>Logger</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_formatmsg_.html">&quot;format<wbr>Msg&quot;</a>
+						<a href="../modules/formatMsg.html">format<wbr>Msg</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_index_.html">&quot;index&quot;</a>
+						<a href="../modules/index.html">index</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_logdriverbase_.html">&quot;log<wbr>Driver<wbr>Base&quot;</a>
+						<a href="../modules/logDriverBase.html">log<wbr>Driver<wbr>Base</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_logdriverblank_.html">&quot;log<wbr>Driver<wbr>Blank&quot;</a>
+						<a href="../modules/logDriverBlank.html">log<wbr>Driver<wbr>Blank</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/logDriverConsole.html">log<wbr>Driver<wbr>Console</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="_logdriverconsole_.html">&quot;log<wbr>Driver<wbr>Console&quot;</a>
+						<a href="../modules/logger.html">logger</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_logger_.html">&quot;logger&quot;</a>
+						<a href="../modules/tLogger.html">t<wbr>Logger</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="_tlogger_.html">&quot;t<wbr>Logger&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="_types_.html">&quot;types&quot;</a>
+						<a href="../modules/types.html">types</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_logdriverconsole_.logdriverconsole.html" class="tsd-kind-icon">log<wbr>Driver<wbr>Console</a>
+						<a href="../classes/logger.logger-1.html" class="tsd-kind-icon">logger</a>
 					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
+						<a href="logger.tHooks.html" class="tsd-kind-icon">t<wbr>Hooks</a>
+						<ul>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="logger.tHooks.html#beforeFaultExitProcess" class="tsd-kind-icon">before<wbr>Fault<wbr>Exit<wbr>Process</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-variable tsd-parent-kind-module">
-						<a href="_logdriverconsole_.html#clogdriverconsole" class="tsd-kind-icon">c<wbr>Log<wbr>Driver<wbr>Console</a>
+						<a href="../modules/logger.html#cLogger" class="tsd-kind-icon">c<wbr>Logger</a>
 					</li>
 				</ul>
 			</nav>
@@ -156,10 +179,11 @@
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>

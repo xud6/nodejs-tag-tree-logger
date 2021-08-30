@@ -1,6 +1,6 @@
 {
   "name": "tag-tree-logger",
-  "version": "3.0.3",
+  "version": "3.1.0",
   "description": "a logger with tag tree support",
   "main": "dist/index.js",
   "typings": "dist/definitions/index.d.ts",
