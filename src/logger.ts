@@ -119,7 +119,7 @@ export class logger extends tLogger {
         }
         process.exit(-1);
     }
-    private async completeLogTransfer() {
+    async completeLogTransfer() {
         let handlers = this.driverHolder.get().map((driver) => {
             return driver.completeTransfer();
         })
